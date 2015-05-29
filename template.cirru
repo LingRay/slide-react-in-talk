@@ -8,7 +8,7 @@ var
     stir.doctype
     html null
       head null
-        title null ":Sedum Slide"
+        title null ":简聊 & React"
         meta $ object (:charset :utf-8)
         script $ object (:src data.main) (:defer true)
         link $ object (:rel :icon)
@@ -16,4 +16,4 @@ var
         link $ object (:rel :stylesheet)
           :href :style/main.css
       body null
-        div null :empty
+        div null :loading...

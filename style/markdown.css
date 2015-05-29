@@ -1,7 +1,18 @@
 
 .slide pre {
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.6em;
-  background: #F4F4F4;
+  background: #D7D7D7;
   padding: 0.5em 1em;
+}
+
+.slide blockquote {
+  background: #EDEDED;
+  padding: 1px 1em;
+}
+
+.slide p code,
+.slide li code {
+  background: #DFDFDF;
+  padding: 0 0.5em;
 }

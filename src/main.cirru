@@ -12,13 +12,14 @@ var
   div $ React.createFactory :div
 
 var blocks $ reader.read slides
+var cacheKey :sedum-slide-index
 
 var App $ React.createClass $ object
   :displayName :app-root
 
   :getInitialState $ \ ()
     return $ object
-      :cursor 0
+      :cursor (Number $ or $ localStorage.getItem cacheKey)
 
   :componentDidMount $ \ ()
     window.addEventListener :keydown this.onWindowKeydown
@@ -27,12 +28,16 @@ var App $ React.createClass $ object
     window.removeEventListener :keydown this.onWindowKeydown
 
   :moveUp $ \ ()
+    var newIndex $ Math.max (- this.state.cursor 1) 0
     this.setState $ object
-      :cursor $ Math.max (- this.state.cursor 1) 0
+      :cursor newIndex
+    localStorage.setItem cacheKey $ String newIndex
 
   :moveDown $ \ ()
+    var newIndex $ Math.min (+ this.state.cursor 1) (- blocks.length 1)
     this.setState $ object
-      :cursor $ Math.min (+ this.state.cursor 1) (- blocks.length 1)
+      :cursor newIndex
+    localStorage.setItem cacheKey $ String newIndex
 
   :onWindowKeydown $ \ (event)
     switch (keycode event.keyCode)
@@ -46,6 +51,7 @@ var App $ React.createClass $ object
   :onTitleClick $ \ (index)
     this.setState $ object
       :cursor index
+    localStorage.setItem cacheKey $ String index
 
   :onSlideClick $ \ (event)
     event.preventDefault
@@ -68,8 +74,8 @@ var App $ React.createClass $ object
       var onTitleClick $ \\ ()
         this.onTitleClick index
       var style $ object
-        :top $ + (/ innerHeight 2)
-          * 50 (- index this.state.cursor)
+        :top $ + (/ innerHeight 3)
+          * 80 (- index this.state.cursor)
       return $ div
         object (:className className) (:key index) (:style style)
           :onClick onTitleClick
@@ -86,3 +92,6 @@ var App $ React.createClass $ object
         this.renderTitles
 
 React.render (React.createElement App) document.body
+
+= window.onresize $ \ ()
+  React.render (React.createElement App) document.body
