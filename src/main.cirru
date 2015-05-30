@@ -19,7 +19,9 @@ var App $ React.createClass $ object
 
   :getInitialState $ \ ()
     return $ object
-      :cursor (Number $ or $ localStorage.getItem cacheKey)
+      :cursor $ Number $ or
+        localStorage.getItem cacheKey
+        , 0
 
   :componentDidMount $ \ ()
     window.addEventListener :keydown this.onWindowKeydown

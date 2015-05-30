@@ -16,7 +16,7 @@ gulp.task :rsync $ \ (cb)
       :src $ array :index.html :build :images :style
       :recursive true
       :args $ array :--verbose
-      :dest :tiye:~/repo/sedum-slide/
+      :dest :tiye:~/repo/slide-react-in-talk/
       :deleteAll true
     \ (error stdout stderr cmd)
       if (? error)

@@ -16,12 +16,13 @@
 
 ----
 
-### 简聊
+### 简聊 & React.js
 
 简聊一款面向企业用户的即时沟通工具
 
 * http://talk.ai/
 * 单页面应用, 实时性
+* <hr@teambition.com>
 
 React.js
 
@@ -46,11 +47,12 @@ React.js
 
 逐步迁移
 
-* 2014.02 Backbone
+* 2014.02 Backbone, doT.js, require.js
 * 2014.05 开始研究 React
 * 2014.10 在侧边栏用 React 写过渡动画
 * 2014.11 优化消息流性能
 * 2015.01 去掉 Backbone 依赖, 引入 Flux
+* 2015.02 切换到 Webpack
 
 后面是更多的组件化的工作, 以及功能增改...
 
@@ -118,7 +120,7 @@ Searching 234 files for "createClass"
 ### Flux
 
 * Store: 参考官方实现
-* Components(App, Module),
+* View, Components(App, Module),
 * Actions: 我们的 Ajax, WebSocket 和 Action 紧密结合的
 
 一些思考:
@@ -134,7 +136,7 @@ Searching 234 files for "createClass"
 优势:
 
 * 代码热替换(Hot Module Replacement)
-* 分包, Hashing 方案明确(比从前有 Gulp 清晰很多)
+* 分包, Hashing 方案明确(比从前 Gulp 写清晰很多)
 * 内网访问开发环境, 方便其他人查看进展
 * 同时兼容 AMD, CommonJS 写法, 多种代码格式, 迁移
 
@@ -179,4 +181,4 @@ React 的难度, 也关系到招聘:
 
 Thanks.
 
-<hr@teambition.com>
+QA: 10:30 am - 11:00 am

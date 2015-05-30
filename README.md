@@ -1,19 +1,12 @@
 
-Sedum Slide
+简聊 & React
 ----
 
-Demo http://repo.tiye.me/sedum-slide/
+Slide http://repo.tiye.me/slide-react-in-talk/
+Event https://www.teambition.com/info/news/article?p=info-news&s=&_id=55558ebb0245645474e19346
 
-A small slide tool to be less disturbing.
-
-### Logo
-
-![](./images/sedum-320x320.png)
-![](./images/sketch.png)
-
-Imspired by: https://dribbble.com/shots/1847084-Sedum-Repestre-Angelina?list=searches&offset=0
-
-![](./images/inspiration.png)
+![](http://ww2.sinaimg.cn/bmiddle/005MlER1jw1esm3d6gmgrj30xc18g4a5.jpg)
+![](http://ww3.sinaimg.cn/bmiddle/005MlER1jw1esm3d7zlkoj318g0xcqc1.jpg)
 
 ### Usage
 
